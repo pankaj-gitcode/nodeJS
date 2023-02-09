@@ -30,9 +30,9 @@ function fibonacci(numLen){
 console.log(fibonacci(askLength));
 
 // while loop to obtain more Fibonacci
-var endFab = "False";
+var endFab = false;
 
-while (endFab != "True"){
+while (endFab != true){
   var askChoice = readlineSync.question("\nWant more series[yes/no]?\n");
 
   if (askChoice.toLowerCase() === "yes"){
@@ -41,7 +41,7 @@ while (endFab != "True"){
   }
   if (askChoice.toLowerCase() === "no") {
     console.log("Completed!");
-    endFab = "True";
+    endFab = true;
   }
 }
 
