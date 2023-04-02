@@ -1,6 +1,6 @@
 var readlineSync = require("readline-sync");
 
-//take empty array to store Fibonacci numbers
+//empty array to store Fibonacci numbers
 var emptyList = [];
 
 // ask length of fibonacci series
