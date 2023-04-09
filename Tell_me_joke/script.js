@@ -18,4 +18,5 @@ let randJoke = jokesArry[jokeNum];
 //get the HTML content of element div:
 let divElem = document.getElementById("para").innerHTML;
 
+//merge the random joke to DOM
 document.getElementById("para").innerHTML = randJoke;
