@@ -4,7 +4,7 @@ const person = {
   }
 }
 const person1 = {name: 'oook'};
-// person.greet.call(person1, 'hi')
+ person.greet.call(person1, 'hi')
 //-------------apply() -------------------------
 //syntax: functionName.apply(thisArg, [argsList])
 
