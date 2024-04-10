@@ -35,6 +35,25 @@ const info= (...msg)=>{
 const details = {name: 'Mac'}
 // info.apply(details, ['c', 'c++', 'JS'])
 
+
+
+function userName(...args){
+  this.username = args;
+  
+}
+
+function createUser(username, email, password){
+  userName.apply(this,[username]);
+
+  this.email = email;
+  this.password = password;
+}
+
+console.log(createUser('Raj', 'mail@mail.com', 'abc123'));
+const uname = new createUser('jon', 'mail', 'abc123');
+console.log(uname);
+//-------------apply() -------------------------
+//...............................................................
 //-------------bind() -------------------------
 const pInfo1={
   fName: 'john',
