@@ -1,0 +1,50 @@
+let result = [];
+//fetch git API
+const fetchAPI = async()=>{
+  const response = await fetch(`https://api.github.com/users/pankaj-gitcode`);
+  const res = await response.json();
+  console.log(`RESPONSE IS: ${JSON.stringify(res)}`)
+  const dataPushed = result.push(await res)
+  return res;
+}
+const apiData = fetchAPI()
+apiData.then(data=>console.log("DATA IS:",data))
+console.log("result is:",result[0])
+
+setTimeout(()=>console.log("RESULTTT", result[0].login), 2000)
+
+
+//................................................
+//function that select button elements and add a click event
+// const initApp = ()=>{
+//   const button = document.querySelector('button')
+//   button.addEventListener("click",clickLog );
+// }
+
+// const clickLog = ()=>console.log('Clicked');
+
+// document.addEventListener('DOMContentLoaded', initApp)
+// clickLog()
+
+const inputElement = document.getElementById("inputVal");
+
+//eventlistener in input element
+inputElement.addEventListener('keyup', (e)=>{
+  const enteredVal = e.target.value;
+  console.log(`Entered Value is: ${enteredVal}`);
+  //grab <p>
+  const paraElem = document.getElementById("para");
+  paraElem.innerHTML = enteredVal
+  return enteredVal;
+})
+
+
+.................
+const fetchApi = async()=>{
+  const response = await fetch(`https://api.github.com/users/pankaj-gitcode`);
+  const res = response.json();
+  console.log(`RES IS: ${res}`)
+  res.then(data=>console.log("DATA IS:",data.id)).catch(err=>console.log(err))
+}
+const APIdata = fetchApi();
+console.log(`Fetched API: ${APIdata}`)
