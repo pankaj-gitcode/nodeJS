@@ -1,0 +1,21 @@
+const numletr = ()=>{
+  const numLetr = [];//store all literals & numbers
+  const randNumLetr = [];//store 5 digits
+  
+  for(let i=0; i<=90; i++){ //iterate to get literals & nums
+    if(i >= 65 && i<=90){ //all alphbets
+      const letr = String.fromCharCode(i);//⭐return alphabets
+        numLetr.push(letr); //push to empty array 
+        numLetr.push(letr.toLowerCase());
+    }
+    if(i>=0 && i<=10)numLetr.push(i)//push nums from 0to10
+  }
+    for(let i=0; i<5; i++){ //random words shoild be 5 digits
+      const randWords = Math.floor(Math.random()*numLetr.length);//index of numLetr
+      randNumLetr.push(numLetr[randWords])//push all 5 digits
+    } 
+  const randLetr = randNumLetr.join('') //create a string
+  return randLetr;
+  }
+const alpha1 = numletr();
+console.log(alpha1);
