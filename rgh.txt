@@ -1,5 +1,5 @@
 let result = [];
-//fetch git API
+//fetch git
 const fetchAPI = async()=>{
   const response = await fetch(`https://api.github.com/users/pankaj-gitcode`);
   const res = await response.json();
