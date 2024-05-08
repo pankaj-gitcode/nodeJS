@@ -1,5 +1,5 @@
 
-// create an array of jokes:
+// Jokes array:
 let jokesArry = [`Why did the tomato turn red<br> Because it saw the salad dressing<br>`,
 `Why did the scarecrow win an award<br> Because he was outstanding in his field<br>`,
 `Why did the bicycle fall over<br> Because it was two-tired<br>`,
