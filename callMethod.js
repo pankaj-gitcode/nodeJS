@@ -13,7 +13,7 @@ const person2 = {
   age: 31
 }
 person.fullName.call(person1)
-//...................................
+//.....................................
 function func1(...args){
   console.log(`this is ${this.firstName} age is ${this.age}`)};
 func1.call(person2)
