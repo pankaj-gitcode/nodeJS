@@ -1,39 +1,55 @@
-// console.log(inputBox)
-// inputOne.focus();
-// inputTwo.focus();
+const boxIds = ['id1','id2','id3'];
 
-// grab the input boxes element
-const inputBox = document.querySelector('#inputElm')
-const inputOne = document.querySelector('#inp1')
-const inputTwo = document.querySelector('#inp2')
+const boxFunc = ()=>{
+  boxIds.map((elem)=>{
+  const inputBox = document.createElement('input');
+    inputBox.setAttribute('id', elem)
+    inputBox.setAttribute('placeholder', 'Enter Num')
+    inputBox.setAttribute('maxlength', 2)
+    document.body.appendChild(inputBox)
+  })
+}
 
-console.log('attribute-1:',inputOne.getAttribute('maxlength'))
+boxFunc()
+//inputBoxes
+const inputBox1 = document.querySelector('#id1');
+const inputBox2 = document.querySelector('#id2');
+const inputBox3 = document.querySelector('#id3');
+console.log(inputBox1, inputBox2, inputBox3);
 
-//define inputs functions and invoke focus() handler function
-  const inputOneFunc = ()=>{
-    const inputValue = inputOne.value;
-    console.log("InputOne:", inputValue.length);
-    inputHandler()
-    // return inputValue;
-  }
- const inputTwoFunc = ()=>{
-   const inputValue = inputTwo.value;
-   console.log(`Input_Two: ${inputValue}`)
-   inputHandler(); //invoking handler function
- }
+inputBox1.focus();
+const inputFn1 = ()=>{
+  const inputVal1 = inputBox1.value;
+  inputHandler();
+}
+const inputFn2 = ()=>{
+  const inputVal2 = inputBox2.value;
+  inputHandler();
+}
+
+const inputFn3 = ()=>{
+  const inputVal3 = inputBox3.value;
+  inputHandler();
+}
 
 const inputHandler = ()=>{
-
-  //move focus to other input boxes, if user entered value length >= maxlength defined for each input boxes
-  if(inputOne.value.length < inputOne.getAttribute('maxlength')){
-    console.log("InputValue:", inputOne.value)
-    inputOne.focus();
+  if(inputBox1.value.length < 2){
+    inputBox1.focus();
+    inputFn2()
   }
-  else if (inputTwo.value.length < inputTwo.getAttribute('maxlength')){
-    console.log('inputTwo Value:', inputTwo.value)
-    inputTwo.focus();
+  else if(inputBox2.value.length < 2){
+    inputBox2.focus()
+    inputFn3()
   }
-  // else if(inputTwo.value.length >= inputTwo.getAttribute('maxlength'))
-  else {return inputBox.focus()}
-
+  else if(inputBox3.value.length < 2){
+    inputBox3.focus();
+  }
+  else{
+     
+  }
 }
+
+//adding functions
+inputBox1.addEventListener('keyup', inputFn1);
+inputBox2.addEventListener('keyup', inputFn2);
+inputBox3.addEventListener('keyup', inputFn3);
