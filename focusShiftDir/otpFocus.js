@@ -101,6 +101,12 @@ document.body.appendChild(button);
 
 const clickForOTP = () => {
   inputBoxIds.map((id) => {
+
+    const para = document.createElement('p');
+    document.body.appendChild(para)
+
+    document.getElementById(`${id}`).value === OTP[inputBoxIds.indexOf(id)]? para.innerText=`✔️Matched:${document.getElementById(`${id}`).value}`:para.innerText=`❗Not Matched: ${document.getElementById(`${id}`).value}`
+    
     document.getElementById(`${id}`).value === OTP[inputBoxIds.indexOf(id)]
       ? console.log(`Matched:${OTP[inputBoxIds.indexOf(id)]}`)
       : console.log(`not Matched: ${document.getElementById(`${id}`).value}!!`);
