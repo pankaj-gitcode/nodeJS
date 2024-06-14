@@ -11,7 +11,7 @@ const person1 = {name: 'oook'};
 const db = {
   name: 'db1',
   greet: function(msg){
-    console.log(`${msg} this is ${this.name}, skill is: ${this.skill}`)
+    console.log(`${msg} this is: ${this.name}, skill is: ${this.skill}`)
   }
 }
 const person2={
